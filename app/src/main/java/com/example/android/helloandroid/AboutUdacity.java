@@ -33,4 +33,6 @@ public class AboutUdacity extends AppCompatActivity {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.udacity.com"));
         startActivity(browserIntent);
     }
+
+
 }
