@@ -7,74 +7,8 @@
     android:background="@color/colorPrimary"
     tools:context="com.example.android.helloandroid.AboutUdacity" >
 
-    <TextView
-        android:id="@+id/discover"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Discover Your Potential"
-        android:textSize="58sp"
-        android:fontFamily="@font/lasvegas"
-        android:textColor="@color/colorAccent"
-        android:layout_margin="0dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <ImageView
-        android:id="@+id/udacity"
-        android:layout_width="match_parent"
-        android:layout_height="125dp"
-        android:layout_marginTop="0dp"
-        android:src="@drawable/logo_wide"
-        android:scaleType="centerCrop"
-        app:layout_constraintTop_toBottomOf="@id/discover" />
-
-    <TextView
-        android:id="@+id/address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/udacity"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_margin="28dp"
-        android:fontFamily="@font/lasvegas"
-        android:text="2465 Latham St."
-        android:textSize="34sp"
-        android:textColor="@color/colorAccent"/>
-    <TextView
-        android:id="@+id/address2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/address"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_margin="28dp"
-        android:fontFamily="@font/lasvegas"
-        android:text="Mountain View, CA 94043"
-        android:textSize="34sp"
-        android:textColor="@color/colorAccent"/>
-    <TextView
-        android:id="@+id/address3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/address2"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_margin="28dp"
-        android:fontFamily="@font/lasvegas"
-        android:text="650-555-5555"
-        android:textSize="34sp"
-        android:textColor="@color/colorAccent"/>
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/address3"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_margin="28dp"
-        android:fontFamily="@font/lasvegas"
-        android:text="START YOUR JOURNEY NOW"
-        android:textSize="22sp"
-        android:textColor="@color/colorAccent"/>
-
-
     <LinearLayout
+        android:id="@+id/linear_layout"
         android:layout_width="100dp"
         android:layout_height="300dp"
         android:layout_marginBottom="20dp"
@@ -124,5 +58,83 @@
             android:padding="5dp"
             android:layout_weight="1" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/discover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Discover Your Potential"
+        android:textSize="58sp"
+        android:fontFamily="@font/lasvegas"
+        android:textColor="@color/colorAccent"
+
+         />
+    <ImageView
+        android:id="@+id/udacity"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo_wide"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/discover"
+        app:layout_constraintBottom_toTopOf="@id/linear_layout"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/linear_layout">
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/lasvegas"
+            android:text="2465 Latham St."
+            android:textSize="34sp"
+            android:textColor="@color/colorAlmostBlack"/>
+        <TextView
+            android:id="@+id/address2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/lasvegas"
+            android:text="Mountain View, CA 94043"
+            android:textSize="34sp"
+            android:textColor="@color/colorAlmostBlack"/>
+        <TextView
+            android:id="@+id/address3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/lasvegas"
+            android:text="650-555-5555"
+            android:textSize="34sp"
+            android:textColor="@color/colorAlmostBlack"/>
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginBottom="35dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/lasvegas"
+            android:text="START YOUR JOURNEY NOW"
+            android:textSize="22sp"
+            android:textColor="@color/colorAlmostBlack"/>
+    </LinearLayout>
+
+
 
 </android.support.constraint.ConstraintLayout>
