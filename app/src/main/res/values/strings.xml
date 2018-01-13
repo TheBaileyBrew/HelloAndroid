@@ -3,6 +3,7 @@
     <string name="discover">Discover Your Potential</string>
     <dimen name="large_font">60sp</dimen>
     <dimen name="med_font">24sp</dimen>
+    <dimen name="padding50">50dp</dimen>
     <dimen name="padding20">20dp</dimen>
     <dimen name="padding15">15dp</dimen>
     <dimen name="padding10">10dp</dimen>

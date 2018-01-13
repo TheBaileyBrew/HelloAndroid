@@ -7,14 +7,27 @@
     android:background="@color/colorPrimary"
     tools:context="com.example.android.helloandroid.AboutUdacity" >
 
-    <LinearLayout
-        android:id="@+id/LinearLayoutbottom"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginBottom="@dimen/padding20"
-        android:orientation="horizontal"
+    <Button
+        android:id="@+id/my_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lasvegas"
+        android:text="SHOW LINKS"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textSize="@dimen/med_font"
+        android:textColor="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent">
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"/>
+
+
+    <LinearLayout
+        android:id="@+id/my_view"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_marginBottom="@dimen/padding50"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
         <ImageButton
             android:contentDescription="@string/desc"
             android:id="@+id/fb"
@@ -27,6 +40,7 @@
             android:padding="@dimen/padding15"
             android:layout_weight="1" />
         <ImageButton
+            android:contentDescription="@string/desc"
             android:id="@+id/youtube"
             android:onClick="buttonTube"
             android:src="@drawable/white_tube"
@@ -37,6 +51,7 @@
             android:padding="@dimen/padding15"
             android:layout_weight="1" />
         <ImageButton
+            android:contentDescription="@string/desc"
             android:id="@+id/tweet"
             android:onClick="buttonTweet"
             android:src="@drawable/white_tweet"
@@ -47,7 +62,8 @@
             android:padding="@dimen/padding15"
             android:layout_weight="1" />
         <ImageButton
-            android:id="@+id/web"
+            android:contentDescription="@string/desc"
+            android:id="@+id/www"
             android:onClick="buttonWWW"
             android:src="@drawable/white_www"
             android:background="@null"
@@ -57,6 +73,7 @@
             android:padding="@dimen/padding15"
             android:layout_weight="1" />
     </LinearLayout>
+
     <TextView
         android:id="@+id/discover"
         android:layout_width="wrap_content"
@@ -72,6 +89,7 @@
 
          />
     <ImageView
+        android:contentDescription="major logo"
         android:id="@+id/udacity"
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -96,7 +114,7 @@
             android:id="@+id/address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/padding10"
+            android:layout_marginBottom="0dp"
             android:layout_marginTop="@dimen/padding5"
             android:drawableLeft="@drawable/small_loc"
             android:fontFamily="@font/lasvegas"
@@ -109,8 +127,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:layout_marginBottom="@dimen/padding10"
-            android:layout_marginTop="@dimen/padding10"
+            android:layout_marginBottom="@dimen/padding5"
+            android:layout_marginTop="0dp"
             android:fontFamily="@font/lasvegas"
             android:text="Mountain View, CA 94043"
             android:textColor="@color/colorAlmostBlack"
@@ -120,8 +138,8 @@
             android:id="@+id/phone"
             android:layout_width="wrap_content"
             android:layout_height="29dp"
-            android:layout_marginBottom="@dimen/padding10"
-            android:layout_marginTop="@dimen/padding10"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="5dp"
             android:autoLink="all"
             android:drawableLeft="@drawable/small_phone"
             android:fontFamily="@font/lasvegas"
