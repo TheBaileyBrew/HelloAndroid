@@ -7,26 +7,11 @@
     android:background="@color/colorPrimary"
     tools:context="com.example.android.helloandroid.AboutUdacity" >
 
-    <Button
-        android:id="@+id/my_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/lasvegas"
-        android:text="SHOW LINKS"
-        android:backgroundTint="@color/colorPrimaryDark"
-        android:textSize="@dimen/med_font"
-        android:textColor="@color/colorAccent"
-        android:onClick="onSlideViewButtonClick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toRightOf="parent"
-        app:layout_constraintRight_toLeftOf="parent"/>
-
-
     <LinearLayout
         android:id="@+id/my_view"
         android:layout_width="match_parent"
-        android:layout_height="125dp"
-        android:layout_marginBottom="@dimen/padding50"
+        android:layout_height="100sp"
+        android:layout_marginBottom="@dimen/padding15"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent">
         <ImageButton
@@ -38,7 +23,7 @@
             android:scaleType="centerInside"
             android:layout_height="match_parent"
             android:layout_width="0dp"
-            android:padding="@dimen/padding15"
+            android:padding="@dimen/padding5"
             android:layout_weight="1" />
         <ImageButton
             android:contentDescription="@string/desc"
@@ -49,7 +34,7 @@
             android:scaleType="centerInside"
             android:layout_height="match_parent"
             android:layout_width="0dp"
-            android:padding="@dimen/padding15"
+            android:padding="@dimen/padding5"
             android:layout_weight="1" />
         <ImageButton
             android:contentDescription="@string/desc"
@@ -60,93 +45,105 @@
             android:scaleType="centerInside"
             android:layout_height="match_parent"
             android:layout_width="0dp"
-            android:padding="@dimen/padding15"
+            android:padding="@dimen/padding5"
             android:layout_weight="1" />
         <ImageButton
             android:contentDescription="@string/desc"
-            android:id="@+id/www"
-            android:onClick="buttonWWW"
-            android:src="@drawable/white_www"
+            android:id="@+id/my_button"
+            android:onClick="onSlideViewButtonClick"
+            android:src="@drawable/white_link"
             android:background="@null"
             android:scaleType="centerInside"
             android:layout_height="match_parent"
             android:layout_width="0dp"
-            android:padding="@dimen/padding15"
+            android:visibility="visible"
+            android:padding="@dimen/padding5"
             android:layout_weight="1" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/discover"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding20"
+        android:layout_marginLeft="@dimen/padding10"
+        android:layout_marginRight="@dimen/padding10"
+        android:gravity="center"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:text="@string/discover"
         android:textSize="@dimen/large_font"
         android:fontFamily="@font/lasvegas"
-        android:textColor="@color/colorAccent"
-
-         />
+        android:textColor="@color/colorAccent" />
     <ImageView
         android:contentDescription="major logo"
         android:id="@+id/udacity"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_marginTop="@dimen/padding20"
-        android:src="@drawable/logo_wide"
-        android:scaleType="centerCrop"
+        android:layout_marginTop="@dimen/padding10"
+        android:layout_marginLeft="@dimen/padding10"
+        android:layout_marginRight="@dimen/padding10"
         app:layout_constraintTop_toBottomOf="@id/discover"
-        />
+        android:src="@drawable/logo"
+        android:scaleType="fitCenter" />
 
     <LinearLayout
         android:id="@+id/address_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/padding20"
-        android:orientation="vertical"
-        android:gravity="center"
+        android:layout_marginTop="@dimen/padding10"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/udacity">
+        app:layout_constraintTop_toBottomOf="@id/udacity"
+        android:orientation="vertical"
+        android:gravity="center" >
 
         <TextView
             android:id="@+id/address"
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="0dp"
             android:layout_marginTop="@dimen/padding5"
+            android:layout_marginLeft="@dimen/padding20"
+            android:layout_marginRight="@dimen/padding20"
+            android:autoLink="map"
             android:drawableLeft="@drawable/small_loc"
+            android:drawablePadding="@dimen/padding5"
             android:fontFamily="@font/lasvegas"
-            android:text="   2465 Latham St."
+            android:text="@string/street_address"
             android:textColor="@color/colorAlmostBlack"
-            android:textSize="@dimen/med_font" />
+            android:textSize="@dimen/med_large_font" />
 
         <TextView
             android:id="@+id/address2"
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:layout_marginBottom="@dimen/padding5"
-            android:layout_marginTop="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/padding20"
+            android:layout_marginRight="@dimen/padding20"
+            android:autoLink="map"
             android:fontFamily="@font/lasvegas"
-            android:text="Mountain View, CA 94043"
+            android:text="@string/city_state"
             android:textColor="@color/colorAlmostBlack"
-            android:textSize="@dimen/med_font" />
+            android:textSize="@dimen/med_large_font" />
 
         <TextView
             android:id="@+id/phone"
+            android:gravity="center"
             android:layout_width="wrap_content"
-            android:layout_height="29dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="0dp"
             android:layout_marginTop="5dp"
-            android:autoLink="all"
+            android:autoLink="phone"
             android:drawableLeft="@drawable/small_phone"
+            android:drawablePadding="@dimen/padding5"
             android:fontFamily="@font/lasvegas"
-            android:text="   (650) 555-5555"
+            android:text="@string/phone"
             android:textColor="@color/colorAlmostBlack"
-            android:textSize="@dimen/med_font" />
+            android:textSize="@dimen/med_large_font" />
 
         <TextView
             android:id="@+id/journey"
@@ -157,7 +154,7 @@
             android:fontFamily="@font/lasvegas"
             android:text="START YOUR JOURNEY NOW"
             android:textColor="@color/colorAlmostBlack"
-            android:textSize="@dimen/med_font" />
+            android:textSize="@dimen/med_large_font" />
     </LinearLayout>
 
 

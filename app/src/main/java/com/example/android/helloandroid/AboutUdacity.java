@@ -15,8 +15,10 @@ import android.widget.LinearLayout;
 
 public class AboutUdacity extends AppCompatActivity {
 
-    Button myButton;
+    ImageButton myButton;
     View myView;
+    View myView2;
+    View myView3;
     boolean isUp;
 
     @Override
@@ -24,11 +26,15 @@ public class AboutUdacity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_udacity);
 
-        myView = findViewById(R.id.my_view);
+        myView = findViewById(R.id.fb);
+        myView2 = findViewById(R.id.tweet);
+        myView3 = findViewById(R.id.youtube);
         myButton = findViewById(R.id.my_button);
 
         //set as invisible
         myView.setVisibility(View.INVISIBLE);
+        myView2.setVisibility(View.INVISIBLE);
+        myView3.setVisibility(View.INVISIBLE);
         isUp = false;
     }
 
@@ -48,22 +54,18 @@ public class AboutUdacity extends AppCompatActivity {
         startActivity(browserIntent);
     }
 
-    public void buttonWWW(View view) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.udacity.com"));
-        startActivity(browserIntent);
-    }
-
     // slide the view from below itself to the current position
     public void slideUp(View view) {
         view.setVisibility(View.VISIBLE);
         TranslateAnimation animate = new TranslateAnimation(
                 0,                 // fromXDelta
                 0,                 // toXDelta
-                500,  // fromYDelta
+                1000,  // fromYDelta
                 0);                // toYDelta
         animate.setDuration(500);
         animate.setFillAfter(true);
         view.startAnimation(animate);
+
     }
 
     // slide the view from its current position to below itself
@@ -72,7 +74,7 @@ public class AboutUdacity extends AppCompatActivity {
                 0,                 // fromXDelta
                 0,                 // toXDelta
                 0,                 // fromYDelta
-                500); // toYDelta
+                1000); // toYDelta
         animate.setDuration(500);
         animate.setFillAfter(true);
         view.startAnimation(animate);
@@ -81,10 +83,14 @@ public class AboutUdacity extends AppCompatActivity {
     public void onSlideViewButtonClick(View view) {
         if (isUp) {
             slideDown(myView);
-            myButton.setText("SHOW LINKS");
+            slideDown(myView2);
+            slideDown(myView3);
+
         } else {
             slideUp(myView);
-            myButton.setText("HIDE LINKS");
+            slideUp(myView2);
+            slideUp(myView3);
+
         }
         isUp = !isUp;
     }
