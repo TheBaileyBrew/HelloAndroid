@@ -3,8 +3,8 @@
     <string name="discover">Discover Your Potential</string>
     <string name="street_address">  2465 Latham St.</string>
     <string name="city_state">Mountain View, CA 94043</string>
-    <string name="full_addr">  2465 Latham St., Mountain View, CA 94043</string>
-    <string name="phone">  (650) 555-5555</string>
+    <string name="full_addr">2465 Latham St., Mountain View, CA 94043</string>
+    <string name="phone">(650) 555-5555</string>
     <dimen name="large_font">60sp</dimen>
     <dimen name="med_large_font">40sp</dimen>
     <dimen name="med_font">24sp</dimen>

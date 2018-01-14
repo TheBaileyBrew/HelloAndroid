@@ -1,16 +1,12 @@
 package com.example.android.helloandroid;
 
-import android.app.MediaRouteButton;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
 
 
 public class AboutUdacity extends AppCompatActivity {
@@ -85,12 +81,10 @@ public class AboutUdacity extends AppCompatActivity {
             slideDown(myView);
             slideDown(myView2);
             slideDown(myView3);
-
         } else {
             slideUp(myView);
             slideUp(myView2);
             slideUp(myView3);
-
         }
         isUp = !isUp;
     }
