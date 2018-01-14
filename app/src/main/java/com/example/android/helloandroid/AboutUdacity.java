@@ -57,11 +57,11 @@ public class AboutUdacity extends AppCompatActivity {
     public void slideUp(View view) {
         view.setVisibility(View.VISIBLE);
         TranslateAnimation animate = new TranslateAnimation(
-                Animation.RELATIVE_TO_PARENT, 100,                 // fromXDelta
-                Animation.RELATIVE_TO_PARENT, 100,                 // toXDelta
-                Animation.ABSOLUTE, 100,  // fromYDelta
-                Animation.ABSOLUTE, 100);                // toYDelta
-        animate.setDuration(50);
+                0,                 // fromXDelta
+                0,                 // toXDelta
+                500,  // fromYDelta
+                0);                // toYDelta
+        animate.setDuration(500);
         animate.setFillAfter(true);
         view.startAnimation(animate);
     }
@@ -72,8 +72,8 @@ public class AboutUdacity extends AppCompatActivity {
                 0,                 // fromXDelta
                 0,                 // toXDelta
                 0,                 // fromYDelta
-                view.getHeight()); // toYDelta
-        animate.setDuration(50);
+                500); // toYDelta
+        animate.setDuration(500);
         animate.setFillAfter(true);
         view.startAnimation(animate);
     }

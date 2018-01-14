@@ -16,6 +16,7 @@
         android:backgroundTint="@color/colorPrimaryDark"
         android:textSize="@dimen/med_font"
         android:textColor="@color/colorAccent"
+        android:onClick="onSlideViewButtonClick"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
         app:layout_constraintRight_toLeftOf="parent"/>
