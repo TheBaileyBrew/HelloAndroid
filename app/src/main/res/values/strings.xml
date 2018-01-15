@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Hello Android</string>
     <string name="discover">Discover Your Potential</string>
+    <string name="journey">START YOUR JOURNEY NOW</string>
     <string name="street_address">  2465 Latham St.</string>
     <string name="city_state">Mountain View, CA 94043</string>
     <string name="full_addr">2465 Latham St., Mountain View, CA 94043</string>

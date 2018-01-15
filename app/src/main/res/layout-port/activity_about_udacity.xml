@@ -121,7 +121,7 @@
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="@dimen/padding10"
             android:layout_marginLeft="@dimen/padding20"
             android:layout_marginRight="@dimen/padding20"
             android:autoLink="map"
@@ -136,7 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="0dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/padding5"
             android:autoLink="phone"
             android:drawableLeft="@drawable/small_phone"
             android:drawablePadding="@dimen/padding5"
@@ -152,7 +152,7 @@
             android:layout_marginBottom="35dp"
             android:layout_marginTop="@dimen/padding10"
             android:fontFamily="@font/lasvegas"
-            android:text="START YOUR JOURNEY NOW"
+            android:text="@string/journey"
             android:textColor="@color/colorAlmostBlack"
             android:textSize="@dimen/med_large_font" />
     </LinearLayout>
